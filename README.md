@@ -28,3 +28,4 @@ Clone this repository:
 ```bash
 git clone https://github.com/pandit777/cyber-osint-toolkit.git
 cd cyber-osint-toolkit
+chmod 777 *
