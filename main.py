@@ -1,13 +1,4 @@
-from modules import (
-    ip_tracker,
-    port_scanner,
-    whois_lookup,
-    subdomain_finder,
-    email_harvester,
-    mobile_trace,
-    instagram_osint,
-    phone_intel
-)
+from modules import ip_tracker, port_scanner, whois_lookup, subdomain_finder, email_harvester, mobile_trace, instagram_osint, phone_intel
 
 def menu():
     print("""
@@ -26,8 +17,7 @@ def menu():
          ██╔══██║██╔══██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗
          ██║  ██║██║  ██║╚██████╗██║  ██╗███████╗██║  ██║
          ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
-
-            Hacking with Gourav
+         Hacking             with                  Gourav
 
     1. IP Tracker
     2. Port Scanner
@@ -35,19 +25,16 @@ def menu():
     4. Subdomain Finder
     5. Email Harvester
     6. Mobile Number Trace
-    7. Instagram OSINT
-    8. Phone Intelligence (Social Scan)
-
+    7. Instagram Osint
     0. Exit
     """)
-
 
 while True:
     menu()
     choice = input("Select Option: ")
 
     if choice == "1":
-        ip = input("Enter IP Address: ")
+        ip = input("Enter IP: ")
         ip_tracker.track(ip)
 
     elif choice == "2":
@@ -74,13 +61,5 @@ while True:
         username = input("Enter Instagram Username: ")
         instagram_osint.osint(username)
 
-    elif choice == "8":
-        number = input("Enter Phone Number: ")
-        phone_intel.trace(number)
-
     elif choice == "0":
-        print("Exiting Toolkit...")
         break
-
-    else:
-        print("Invalid Option\n")
